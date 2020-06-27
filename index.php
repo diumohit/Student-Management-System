@@ -33,6 +33,16 @@ background-color: #D5CDC2;
 
 }
 
+a{
+
+text-decoration: none;
+color: black;
+
+}
+
+text-decoration: none;
+
+}
 .sub1{
 
     padding: 5px;
@@ -53,6 +63,8 @@ background-color: #FED8BB;
 font-size: 25px;
 font-weight: bolder;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+text-decoration: none;
+color: blue;
 
 }
 

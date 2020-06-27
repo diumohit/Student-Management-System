@@ -13,16 +13,25 @@ border: 2px double   black;
 width: max-content;
 padding: 5px;
 border-radius: 30px;
-
-
 }
+
+ h4 a{
+
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    padding: 5px;
+}
+
 
 a:hover{
 
 background-color: #FED4BB;
-font-size: 18px;
+font-size: 20px;
 font-weight: bolder;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+text-decoration: none;
+color: blue;
 
 
 }
