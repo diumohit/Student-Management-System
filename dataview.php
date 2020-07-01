@@ -89,6 +89,7 @@ if(isset($_REQUEST['deleted'])) {
         <td>Student Age:</td>
         <td>Student E-mail:</td>
         <td>Password:</td>
+        <td>Profile Picture:</td>
         <td>Action</td>
 
     </tr>
@@ -107,6 +108,7 @@ while ($raw = mysqli_fetch_array($runviewquery)) {
         <td><?php echo $raw['st_age']; ?></td>
         <td><?php echo $raw['email']; ?></td>
         <td><?php echo $raw['st_password']; ?></td>
+        <td><center><img width="60px" src="upload/<?php echo$raw['profile_picture']?>"></center></td>
         <td><a href="editdata.php?id=<?php echo $raw['id']; ?>">Edit</a> | <a href="delete.php?id=<?php echo $raw['id']; ?>" >Delete</a></td>
         
     </tr>
