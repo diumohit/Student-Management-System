@@ -7,79 +7,79 @@
     <title>Document</title>
 
     <style>
-        .indexpagebody {
+    .indexpagebody {
 
-            background-image: url("images/20140224-160406.jpg");
+        background-image: url("images/20140224-160406.jpg");
 
-            background-color: skyblue;
-            /* Used if the image is unavailable */
-            height: 500px;
-            /* You must set a specified height */
-            background-position: center;
-            /* Center the image */
-            background-repeat: no-repeat;
-            /* Do not repeat the image */
-            background-size: cover;
-            /* Resize the background image to cover the entire container */
+        background-color: skyblue;
+        /* Used if the image is unavailable */
+        height: 500px;
+        /* You must set a specified height */
+        background-position: center;
+        /* Center the image */
+        background-repeat: no-repeat;
+        /* Do not repeat the image */
+        background-size: cover;
+        /* Resize the background image to cover the entire container */
 
-        }
+    }
 
 
-        .table1 {
+    .table1 {
 
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            font-weight: bold;
-            font-size: 20px;
-            color: green;
-            padding: 10px;
-            margin: 20px 25px 25px 20px;
-            border: 1px solid blueviolet;
-            background-color: #D5CDC2;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: green;
+        padding: 10px;
+        margin: 20px 25px 25px 20px;
+        border: 1px solid blueviolet;
+        background-color: #D5CDC2;
 
-        }
+    }
 
-        a {
-
-            text-decoration: none;
-            color: black;
-
-        }
+    a {
 
         text-decoration: none;
+        color: black;
 
-        }
+    }
 
-        .sub1 {
+    text-decoration: none;
 
-            padding: 5px;
-            width: 200px;
+    }
 
-        }
+    .sub1 {
 
-        .table2 {
+        padding: 5px;
+        width: 200px;
 
-            margin-left: 25px;
-            padding: 2px;
+    }
 
-        }
+    .table2 {
 
-        a:hover {
+        margin-left: 25px;
+        padding: 2px;
 
-            background-color: #FED8BB;
-            font-size: 25px;
-            font-weight: bolder;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            text-decoration: none;
-            color: blue;
+    }
 
-        }
+    a:hover {
 
-        .sub1:hover {
+        background-color: #FED8BB;
+        font-size: 25px;
+        font-weight: bolder;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-decoration: none;
+        color: blue;
 
-            background-color: white;
+    }
+
+    .sub1:hover {
+
+        background-color: white;
 
 
-        }
+    }
     </style>
 
 </head>
@@ -91,7 +91,7 @@
 require_once "connect.php";
 
 ?>
-    <form action="insertdata.php" method="POST">
+    <form action="insertdata.php" enctype="multipart/form-data" method="POST">
 
         <table border="1px" class="table1">
             <tr>
@@ -113,7 +113,7 @@ require_once "connect.php";
 
             <tr>
                 <td>Profile image:</td>
-                <td class="sub1" colspan="2"><input type="file"></td>
+                <td class="sub1" colspan="2"><input type="file" name="profile_picture"></td>
             </tr>
             <tr>
 

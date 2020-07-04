@@ -12,7 +12,15 @@ if ((isset($_REQUEST['st_name'])) && (isset($_REQUEST['st_age'])) && (isset($_RE
     $age = $_REQUEST['st_age'];
     $email = $_REQUEST['email'];
     $pass = $_REQUEST['st_password'];
-    
+
+    //// profile picture upload section
+
+    $propic = $_FILES["profile_picture"]["name"];
+    // $avater_name = $propic['name'];
+    $tmp_file = $_FILES["profile_picture"]["tmp_name"];
+    $directory = "upload/";
+    move_uploaded_file($tmp_file,"upload/$propic");
+
 
     ////// if varible name is incorrent there will show no error but system won't works 
 
@@ -22,7 +30,7 @@ if ((isset($_REQUEST['st_name'])) && (isset($_REQUEST['st_age'])) && (isset($_RE
     }
     else{
         
-    $insertquery = "INSERT INTO tbl_student (st_name,st_age,email,st_password) values ('$name','$age','$email','$pass')"; /// inverted comma is must
+    $insertquery = "INSERT INTO tbl_student (st_name,st_age,email,st_password,profile_picture) values ('$name','$age','$email','$pass','$propic')"; /// inverted comma is must
 
     $runquery = mysqli_query($connect,$insertquery);
 
