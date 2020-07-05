@@ -12,25 +12,26 @@ if ((isset($_REQUEST['st_name'])) && (isset($_REQUEST['st_age'])) && (isset($_RE
     $age = $_REQUEST['st_age'];
     $email = $_REQUEST['email'];
     $pass = $_REQUEST['st_password'];
-
+    
     //// profile picture upload section
 
     $propic = $_FILES["profile_picture"]["name"];
+    /// image file validaton
     // $avater_name = $propic['name'];
     $tmp_file = $_FILES["profile_picture"]["tmp_name"];
-    $directory = "upload/";
-    move_uploaded_file($tmp_file,"upload/$propic");
+    $randomname_fordb = uniqid();
+    move_uploaded_file($tmp_file,"upload/$randomname_fordb.jpg");
+    
 
 
     ////// if varible name is incorrent there will show no error but system won't works 
 
     if ((empty($name)) || (empty($age)) || (empty($email)) || (empty($pass))){   
         echo "<h1 style='color:red';>Fields can not be empty</h1>";
-    
     }
     else{
         
-    $insertquery = "INSERT INTO tbl_student (st_name,st_age,email,st_password,profile_picture) values ('$name','$age','$email','$pass','$propic')"; /// inverted comma is must
+    $insertquery = "INSERT INTO tbl_student (st_name,st_age,email,st_password,profile_picture) values ('$name','$age','$email','$pass','$randomname_fordb.jpg')"; /// inverted comma is must
 
     $runquery = mysqli_query($connect,$insertquery);
 

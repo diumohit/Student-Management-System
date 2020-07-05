@@ -109,7 +109,7 @@ while ($raw = mysqli_fetch_array($runviewquery)) {
         <td><?php echo $raw['email']; ?></td>
         <td><?php echo $raw['st_password']; ?></td>
         <td><center><img width="60px" src="upload/<?php echo$raw['profile_picture']?>"></center></td>
-        <td><a href="editdata.php?id=<?php echo $raw['id']; ?>">Edit</a> | <a href="delete.php?id=<?php echo $raw['id']; ?>" >Delete</a></td>
+        <td><a href="editdata.php?id=<?php echo $raw['id']; ?>">Edit</a> | <a onclick="return confirm ('Are you sure?')" href="delete.php?id=<?php echo $raw['id']; ?>" >Delete</a></td>
         
     </tr>
 
