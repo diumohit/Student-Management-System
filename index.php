@@ -45,9 +45,6 @@
 
     }
 
-    text-decoration: none;
-
-    }
 
     .sub1 {
 
