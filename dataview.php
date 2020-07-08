@@ -7,12 +7,22 @@
 
 <style>
 
+.table1 {
+
+width: 80%;
+text-align: center;
+margin-left: 100px ;
+}
+
 .h11{
 
 border: 2px double   black;
 width: max-content;
 padding: 5px;
 border-radius: 30px;
+margin-left: 550px;
+
+
 }
 
  h4 a{
@@ -27,7 +37,7 @@ border-radius: 30px;
 a:hover{
 
 background-color: #FED4BB;
-font-size: 20px;
+font-size: 13px;
 font-weight: bolder;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 text-decoration: none;
