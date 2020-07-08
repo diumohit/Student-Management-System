@@ -11,7 +11,8 @@
 
 width: 80%;
 text-align: center;
-margin-left: 100px ;
+margin-top: 20px;
+margin-left:100px;
 }
 
 .h11{
@@ -45,6 +46,44 @@ color: blue;
 
 
 }
+
+.search_section{
+
+background-color: whitesmoke;
+border: 2px solid green;
+border-radius: 5px;
+padding: 15px;
+width: 45%;
+margin-left:300px;
+
+}
+
+.search_button{
+
+background-color: green;
+border-radius: 5px;
+padding: 10px;
+color: whitesmoke;
+}
+
+.search_button:hover{
+
+background-color: lightgreen;
+color: black;
+padding: 10px;
+cursor: pointer;
+font-size: 13px;
+}
+
+
+.search_input_section{
+
+width:500px;
+margin: 0 auto;
+padding: 10px;
+
+}
+
 
 
 </style>
@@ -90,6 +129,16 @@ if(isset($_REQUEST['deleted'])) {
 }
 
 ?>
+
+
+<!-- this is search section -->
+
+<div class="search_section">
+<input type="text" class="search_input_section" placeholder="search here" name="search_value">
+<input type="submit" value="Search" class="search_button">
+</div>
+
+<!-- search seciton end -->
 
 <table border="2px" class="table1">
     <tr>
