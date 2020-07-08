@@ -1,0 +1,75 @@
+<?php 
+
+// $i=1;
+// for ($i=1; $i <=10 ; $i++) { 
+//     if ($i%2==0) {
+//         echo "$i Its a Even Number";
+//         echo "<br><br>";
+        
+//     }
+//     else{
+
+//     echo "$i Its a Odd Number";
+//     echo "<br><br>";    
+// }
+// }
+
+/// Foreach loop 
+
+/// Show value by index 
+
+// $price = array(25,26,28);
+// foreach ($price as $value) {
+
+// echo "$value"."<br>";
+    
+// }
+
+// $age = array(60,65,23);
+
+// foreach ($age as $key => $value) {
+//     echo $key.":".$value."<br>";
+// }
+
+/// String array indexing
+
+// $posion = array("ridoy"=>"student","antar"=>"teacher","mahi"=>"headmaster",);
+
+// foreach ($posion as $key => $value) {
+//     echo $key.":".$value."<br>";
+// }
+
+// Break and continue
+
+
+
+// for ($k=1; $k<11 ; $k++) { 
+
+//     echo $k;
+//     //echo "<br>";
+
+//     if ($k==4) {
+//         break;
+//     }
+//     else {
+//         continue;
+        
+//     }
+// }
+
+//Nested Loop 
+
+for ($i=1; $i <=5 ; $i++) { 
+    
+    for ($j=1; $j<=5 ; $j++) { 
+        echo $i;
+        echo $j;
+        echo ":COXBAZAR";
+        echo "<br>";
+    }
+}
+
+  
+
+
+?>

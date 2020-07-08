@@ -21,7 +21,7 @@ if ((isset($_REQUEST['st_name'])) && (isset($_REQUEST['st_age'])) && (isset($_RE
     $tmp_file = $_FILES["profile_picture"]["tmp_name"];
     $randomname_fordb = uniqid();
     move_uploaded_file($tmp_file,"upload/$randomname_fordb.jpg");
-    
+    $imageFileType = strtolower(pathinfo($propic,PATHINFO_EXTENSION));
 
 
     ////// if varible name is incorrent there will show no error but system won't works 
@@ -29,6 +29,16 @@ if ((isset($_REQUEST['st_name'])) && (isset($_REQUEST['st_age'])) && (isset($_RE
     if ((empty($name)) || (empty($age)) || (empty($email)) || (empty($pass))){   
         echo "<h1 style='color:red';>Fields can not be empty</h1>";
     }
+
+    elseif ($_FILES["profile_picture"]["size"] > 50000) {
+        echo "Sorry, your file is too large.";
+      }
+
+    elseif ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+    && $imageFileType != "gif" ) {
+        echo "<h3 style='color:red;font-weight:bold  ' >Sorry, only JPG, JPEG, PNG & GIF files are allowed.</h3>";
+    }
+
     else{
         
     $insertquery = "INSERT INTO tbl_student (st_name,st_age,email,st_password,profile_picture) values ('$name','$age','$email','$pass','$randomname_fordb.jpg')"; /// inverted comma is must
