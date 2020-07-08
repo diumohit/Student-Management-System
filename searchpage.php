@@ -22,7 +22,6 @@ width: max-content;
 padding: 5px;
 border-radius: 30px;
 margin-left: 550px;
-text-decoration: none;
 
 
 }
@@ -91,6 +90,17 @@ padding: 10px;
 
 </head>
 <body>
+    
+<!-- this is search section -->
+<form action="" method="POST">
+
+    <div class="search_section">
+        <input type="text" class="search_input_section" placeholder="search here" name="search_value">
+        <input type="submit" value="Search" name ="searchbtm" class="search_button">
+    </div>
+</form>
+<!-- search seciton end -->
+
 
 <?php
 
@@ -132,7 +142,10 @@ if(isset($_REQUEST['deleted'])) {
 
 ?>
 
-
+<?php
+if (isset($_REQUEST["search_value"])) {
+    $search = $_REQUEST["search_value"];
+    ?>
 
 <table border="2px" class="table1">
     <tr>
@@ -148,7 +161,7 @@ if(isset($_REQUEST['deleted'])) {
     </tr>
     <?php
 
-$viewquery = "SELECT * FROM tbl_student";
+$viewquery = "SELECT * FROM tbl_student where st_name like '%$search%'";
 $runviewquery = mysqli_query($connect,$viewquery);
 $count=1;
 while ($raw = mysqli_fetch_array($runviewquery)) {
@@ -172,7 +185,15 @@ while ($raw = mysqli_fetch_array($runviewquery)) {
 </table>
 
 
-    <h4 class="h11"><a href="searchpage.php">Go to Search Page</a></h4>
+
+
+
+
+<?php }?>
+
+
+
+
 
     <h4 class="h11"><a href="index.php">Go to index page</a></h4>
 
