@@ -30,8 +30,8 @@ if ((isset($_REQUEST['st_name'])) && (isset($_REQUEST['st_age'])) && (isset($_RE
         echo "<h1 style='color:red';>Fields can not be empty</h1>";
     }
 
-    elseif ($_FILES["profile_picture"]["size"] > 50000) {
-        echo "Sorry, your file is too large.";
+    elseif ($_FILES["profile_picture"]["size"] > 2000000) {
+        echo "Sorry, your file is too large(max limit in 2mb).";
       }
 
     elseif ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
