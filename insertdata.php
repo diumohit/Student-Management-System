@@ -19,9 +19,10 @@ if ((isset($_REQUEST['st_name'])) && (isset($_REQUEST['st_age'])) && (isset($_RE
     /// image file validaton
     // $avater_name = $propic['name'];
     $tmp_file = $_FILES["profile_picture"]["tmp_name"];
-    $randomname_fordb = uniqid();
-    move_uploaded_file($tmp_file,"upload/$randomname_fordb.jpg");
-    $imageFileType = strtolower(pathinfo($propic,PATHINFO_EXTENSION));
+    $randomname_fordb = uniqid(); //// Generating random uniq id with uniqid() php build in funnction
+    move_uploaded_file($tmp_file,"upload/$randomname_fordb.jpg");    
+
+    $imageFileType = strtolower(pathinfo($propic,PATHINFO_EXTENSION)); // Just getting file extention with this line
 
 
     ////// if varible name is incorrent there will show no error but system won't works 

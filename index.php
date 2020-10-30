@@ -7,76 +7,76 @@
     <title>Document</title>
 
     <style>
-    .indexpagebody {
+        .indexpagebody {
 
-        background-image: url("images/20140224-160406.jpg");
+            background-image: url("images/20140224-160406.jpg");
 
-        background-color: skyblue;
-        /* Used if the image is unavailable */
-        height: 500px;
-        /* You must set a specified height */
-        background-position: center;
-        /* Center the image */
-        background-repeat: no-repeat;
-        /* Do not repeat the image */
-        background-size: cover;
-        /* Resize the background image to cover the entire container */
+            background-color: skyblue;
+            /* Used if the image is unavailable */
+            height: 500px;
+            /* You must set a specified height */
+            background-position: center;
+            /* Center the image */
+            background-repeat: no-repeat;
+            /* Do not repeat the image */
+            background-size: cover;
+            /* Resize the background image to cover the entire container */
 
-    }
-
-
-    .table1 {
-
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-weight: bold;
-        font-size: 20px;
-        color: green;
-        padding: 10px;
-        margin: 20px 25px 25px 20px;
-        border: 1px solid blueviolet;
-        background-color: #D5CDC2;
-
-    }
-
-    a {
-
-        text-decoration: none;
-        color: black;
-
-    }
+        }
 
 
-    .sub1 {
+        .table1 {
 
-        padding: 5px;
-        width: 200px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bold;
+            font-size: 20px;
+            color: green;
+            padding: 10px;
+            margin: 20px 25px 25px 20px;
+            border: 1px solid blueviolet;
+            background-color: #D5CDC2;
 
-    }
+        }
 
-    .table2 {
+        a {
 
-        margin-left: 25px;
-        padding: 2px;
+            text-decoration: none;
+            color: black;
 
-    }
-
-    a:hover {
-
-        background-color: #FED8BB;
-        font-size: 25px;
-        font-weight: bolder;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        text-decoration: none;
-        color: blue;
-
-    }
-
-    .sub1:hover {
-
-        background-color: white;
+        }
 
 
-    }
+        .sub1 {
+
+            padding: 5px;
+            width: 200px;
+
+        }
+
+        .table2 {
+
+            margin-left: 25px;
+            padding: 2px;
+
+        }
+
+        a:hover {
+
+            background-color: #FED8BB;
+            font-size: 25px;
+            font-weight: bolder;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-decoration: none;
+            color: blue;
+
+        }
+
+        .sub1:hover {
+
+            background-color: white;
+
+
+        }
     </style>
 
 </head>
@@ -84,7 +84,7 @@
 <body class="indexpagebody">
 
 
-    <?php
+<?php
 require_once "connect.php";
 
 ?>
